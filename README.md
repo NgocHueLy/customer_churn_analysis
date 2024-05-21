@@ -7,20 +7,17 @@ I would like to explore these questions:
 
 2. How effiective are the current additional services of Databel for the purpose of reducing churn rate? We'll talk about Unlimited Data Plan, International Plan and Group Active
 
-3. Reccommendations
+3. A look at Customer Service Calls 
 
-4. Predict the likelyhood of churning for the customer base
+4. Insights & Reccommendations
+
 
 
 # Dataset
 
 Dataset from [kaggle](https://www.kaggle.com/datasets/yichienchong/databel-telecom-customer-churn-dataset)
 
-
-# Data cleaning
-Dataset has 6687 rows, 29 columns. Each row represent a unique customer.
-
-Columns descriptions:
+Data dictionary:
 - CustomerID - Unique identification for each customer
 - Churn Label - Whether or not a customer has churned
 - Account Length (in months) - Customer tenure
@@ -32,7 +29,7 @@ Columns descriptions:
 - Intl Plan - whether or not customer ever subscribed to an international plan
 - Extra International Charges - charges incurred on internatoinal calls
 - Customer Service Calls - number of calls put across for help from customer service
-- Avg Monthly Download - downloads of each customer per month
+- Avg Monthly GB Download - GB data usage of each customer per month
 - Unlimited Data Plan - whether or not the customer subscribed for unlimited data.
 - Phone Number - of each customer
 - Gender - whether a customer is male, female or undisclosed
@@ -43,3 +40,22 @@ Columns descriptions:
 - Total Charges - total charges incurred on each customer
 - Churn Category - classes of churns
 - Churn Reason - the reason for the churn of a customer
+- State - customer's location
+- Under 30 - whether the customer is under 30 years old
+- Senior - whether the customer is older than 65 years old
+- Device Protection and Online backup - whether the customer paid for device protection and online backup
+
+# Data cleaning
+- Dataset has 6687 rows, 29 columns. Each row represent a unique customer.
+- Missing values in Churn Category and Churn Reason are replaced with "Unknown"
+
+# Dashboard Structure
+Dashboard created with Power BI, downloaded [here](customer-churn-analysis.pbix).
+
+Dashboard contains 3 pages:
+- Overview: general insights for churner profile
+- Service: look at the effectiveness of the additional services: Unlimited Data Plan, International Plan, Group Discount
+- Customer service & reccommendation: look at customer service calls, overall insights and recommendation for Databel
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
